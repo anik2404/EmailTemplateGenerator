@@ -1,8 +1,4 @@
 # AI-Powered Email Template Generator Service  
-Assignment 2 – Backend Development
-
-## Problem Statement
-The objective of this assignment is to develop a backend REST API that generates email templates using Generative AI based on user input such as purpose, recipient name, and tone.
 
 ## Technology Stack
 - Java 17  
@@ -34,7 +30,7 @@ Sample Response
 ```json
 {
   "emailTemplate": "Dear Anik,\n\nThis is a polite reminder regarding your pending payment.\n\nRegards,\nSupport Team",
-  "responseTimeMs": 742
+  "responseTimeMs": 1042
 }
 ```
 
@@ -53,7 +49,7 @@ email-generator
 └── src
     └── main
         ├── java
-        │   └── com.example.email
+        │   └── com.example.emailgenerator
         │       ├── controller
         │       ├── service
         │       ├── ai
@@ -98,7 +94,20 @@ This ensures application stability during external service failures.
 - Modular backend architecture  
 - Environment variable configuration  
 - AI response time logging  
-- README documentation  
+- README documentation
 
-## Conclusion
-This project demonstrates backend development using Spring Boot and practical integration of Generative AI for dynamic email content generation, fulfilling all requirements of Assignment 2.
+## AI Prompt Design Explanation
+
+The AI prompts were designed to be simple, clear, and deterministic so that the generated email remains short, professional, and relevant to the user’s intent.
+Each prompt is constructed dynamically using three user inputs:
+Purpose of the email
+Recipient name
+Desired tone (for example, polite or professional)
+These inputs are combined into a single natural-language instruction, such as:
+“Write a short, polite email for Anik regarding payment reminder.”
+The prompt avoids unnecessary context or extra instructions to ensure:
+Consistent and predictable output
+Clear focus on email content only
+Appropriate tone based on user input
+Reduced chances of overly long or irrelevant responses
+This approach keeps the AI behavior controlled and aligns with real-world backend use cases where concise and reliable output is required.
