@@ -88,14 +88,6 @@ Basic fallback handling is implemented.
 If the Gemini API is unavailable, a predefined email template is returned.  
 This ensures application stability during external service failures.
 
-## Assignment Deliverables Covered
-- REST API implementation  
-- Gemini AI integration  
-- Modular backend architecture  
-- Environment variable configuration  
-- AI response time logging  
-- README documentation
-
 ## AI Prompt Design Explanation
 
 The AI prompts were designed to be simple, clear, and deterministic so that the generated email remains short, professional, and relevant to the user’s intent.
