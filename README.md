@@ -1,0 +1,1 @@
+# EmailTemplateGenerator
